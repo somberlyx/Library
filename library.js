@@ -14,7 +14,7 @@ closeBtn.addEventListener("click", () => {
 });
 
 confirmBtn.addEventListener("click", (event) => {
-  addBookToLibrary();
+  addBookToLibrary2();
   addCard();
   event.preventDefault();
   dialog.close();
@@ -35,7 +35,7 @@ function addBookToLibrary(){
   const date = document.querySelector("dialog .published");
   const pages = document.querySelector("dialog .pages");
   const description = document.querySelector("dialog .description")
-  const read = document.querySelector("dialog input[name='Reading']:checked");
+  const read = document.querySelector("dialog input[name='progress']:checked");
   let book = new Book(bookTitle.value, author.value, date.value, pages.value, description.value, read.value)
   console.log(book)
   library.push(book);
@@ -66,8 +66,8 @@ function addBookToLibrary2(){
   const date = document.querySelector("dialog .published");
   const pages = document.querySelector("dialog .pages");
   const description = document.querySelector("dialog .description")
-  const read = document.querySelector("dialog input[name='Reading']:checked");
-  let book = new Book();
+  const read = document.querySelector("dialog input[name='progress']:checked");
+  let book = new Book2();
   book.title = bookTitle.value; 
   book.author = author.value; 
   book.date = date.value;
@@ -77,5 +77,4 @@ function addBookToLibrary2(){
   console.log(book)
   library.push(book);
   console.log(library);
-  
 }
