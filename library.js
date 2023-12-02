@@ -20,7 +20,13 @@ confirmBtn.addEventListener("click", (event) => {
   dialog.close();
 })
 
-function Book() {
+function Book(bookTitle, author, date, pages, description, read) {
+  this.bookTitle = bookTitle;
+  this.author = author;
+  this.date = date;
+  this.pages = pages;
+  this.description = description;
+  this.read = read;
 }
 
 function addBookToLibrary(){
