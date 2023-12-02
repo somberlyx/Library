@@ -56,3 +56,26 @@ function addCard(){
     container.appendChild(card);
   }
 }
+
+function Book2(){
+}
+
+function addBookToLibrary2(){
+  const bookTitle = document.querySelector("dialog .title");
+  const author = document.querySelector("dialog .writtenBy");
+  const date = document.querySelector("dialog .published");
+  const pages = document.querySelector("dialog .pages");
+  const description = document.querySelector("dialog .description")
+  const read = document.querySelector("dialog input[name='Reading']:checked");
+  let book = new Book();
+  book.title = bookTitle.value; 
+  book.author = author.value; 
+  book.date = date.value;
+  book.pages = pages.value; 
+  book.description = description.value;
+  book.read = read.value;
+  console.log(book)
+  library.push(book);
+  console.log(library);
+  
+}
