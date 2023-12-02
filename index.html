@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
-  <script src="library.js" defer></script>
   <title>Library</title>
 </head>
 <body>
@@ -14,9 +13,10 @@
       <h2 class="author">Author</h2>
       <p><span class="date-published">date published</span> <span class="pages">pages</span></p>
       <p class="description">description</p>
+      <button class="delete" data-number='1'>Delete</button>
     </div>
   </div>
-  <button>New Book</button>
+  <button class="new-book">New Book</button>
   <dialog>
     <form action="">
       <label>Book Title: </label> <input type="text" class="title">
@@ -34,5 +34,6 @@
     <button class="close">Close</button>
     <button class="confirm">Confirm</button>
   </dialog>
+  <script src="library.js"></script>
 </body>
 </html>

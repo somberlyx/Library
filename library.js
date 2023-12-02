@@ -1,5 +1,5 @@
 const dialog = document.querySelector("dialog");
-const newBook = document.querySelector("button");
+const newBook = document.querySelector(".new-book");
 const closeBtn = document.querySelector("dialog button");
 const confirmBtn = document.querySelector("dialog .confirm");
 
@@ -52,10 +52,27 @@ function addCard(){
     <h2 class="author">${library[i].author}</h2>
     <p><span class="date-published">${library[i].date}</span> <span class="pages">pages ${library[i].pages}</span></p>
     <p class="description">${library[i].description}</p>
-    `
+    <button class="delete"  data-number="${i}">Delete</button>`
     container.appendChild(card);
+    createDeleteBtn();
   }
 }
+
+function createDeleteBtn() {
+  const deleteBtn = document.querySelectorAll('.delete');
+  deleteBtn.forEach(deletebutton => {
+    deletebutton.addEventListener('click', (e) => {
+    console.log(e.target.dataset.number);
+    });
+  });
+}
+ 
+
+/*const deleteBtn = document.querySelector('.delete');
+deleteBtn.addEventListener('click', (e)=>{
+  console.log(e.target.dataset.number);
+})*/
+
 
 function Book2(){
 }
