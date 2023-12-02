@@ -35,3 +35,18 @@ function addBookToLibrary(){
   library.push(book);
   console.log(library);
 }
+
+function addCard(){
+  for(i=(library.length - 1); i < library.length; i++){
+    const container = document.querySelector(".container");
+    let card = document.createElement("div");
+    card.classList.add('card')
+    card.innerHTML = `
+    <h1 class="book-title">${library[i].title}</h1>
+    <h2 class="author">${library[i].author}</h2>
+    <p><span class="date-published">${library[i].date}</span> <span class="pages">pages ${library[i].pages}</span></p>
+    <p class="description">${library[i].description}</p>
+    `
+    container.appendChild(card);
+  }
+}
