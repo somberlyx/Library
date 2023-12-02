@@ -13,3 +13,5 @@ closeBtn.addEventListener("click", () => {
   dialog.close();
 });
 
+function Book() {
+}
