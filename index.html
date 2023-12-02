@@ -8,12 +8,31 @@
   <title>Library</title>
 </head>
 <body>
-  <div class="card">
-    <h1 class="book-title">Book title</h1>
-    <h2 class="author">Author</h2>
-    <p class="date-published">date published</p>
-    <p class="description">description</p>
+  <div class="container">
+    <div class="card">
+      <h1 class="book-title">Book title</h1>
+      <h2 class="author">Author</h2>
+      <p><span class="date-published">date published</span> <span class="pages">pages</span></p>
+      <p class="description">description</p>
+    </div>
   </div>
-  <button>Add</button>
+  <button>New Book</button>
+  <dialog>
+    <form action="">
+      <label>Book Title: </label> <input type="text" class="title">
+      <label>Author: </label><input type="text" class="writtenBy">
+      <label>Date: </label><input type="text" class="published">
+      <label>Pages: </label><input type="text" class="pages">
+      <label>Description: </label><textarea type="text" class="description"></textarea>
+      <input type="radio" id="Read" name="progress" value="Read">
+      <label for="Read">Read</label>
+      <input type="radio" id="Read" name="progress" value="Read">
+      <label for="Reading">Read</label>
+      <input type="radio" id="Not Read" name="progress" value="Not">
+      <label for="Not Read">Not Read</label>
+    </form>
+    <button class="close">Close</button>
+    <button class="confirm">Confirm</button>
+  </dialog>
 </body>
 </html>
